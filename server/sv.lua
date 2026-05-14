@@ -9,7 +9,7 @@ lib.callback.register('dnj_bus:payd', function(source, account)
     local xpl = ESX.GetPlayerFromId(source)
     local price = dnj.depoprice
 
-    if xpl.getAccount(account).money >= price then
+    if xpl.getAccount(account).money >= price then -- lwk nwm ci ma ox lib check na account money
         xpl.removeAccountMoney(account, price)
         
         local token = gntkn()
