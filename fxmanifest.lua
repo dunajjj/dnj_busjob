@@ -1,0 +1,18 @@
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
+
+
+shared_scripts {
+    '@ox_lib/init.lua', 
+    'cfg.lua'       
+}
+
+client_scripts {
+    'loader.lua'
+}
+
+server_scripts {
+    '@oxmysql/lib/MySQL.lua', 
+    'sv_loader.lua'
+}
