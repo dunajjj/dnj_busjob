@@ -27,55 +27,55 @@ dnj.spawns = {
 dnj.stops = { -- -1410.2244, -569.5855, 30.2850, 117.3376
     { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-1410.2244, -569.5855, 30.2850), 
-        pedsSpawn = vector3(-1411.4515, -550.5594, 30.6520) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-1411.4515, -550.5594, 30.6520) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-1212.1296, -1218.8550, 7.6001), 
-        pedsSpawn = vector3(-1226.2596, -1180.8905, 7.7106) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-1226.2596, -1180.8905, 7.7106) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(53.7369, -1533.3556, 29.1667), 
-        pedsSpawn = vector3(30.2100, -1570.0264, 29.2914) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(30.2100, -1570.0264, 29.2914) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-154.3453, 6208.6958, 31.2022), 
-        pedsSpawn = vector3(-178.4387, 6176.4761, 31.4222) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-178.4387, 6176.4761, 31.4222) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-504.2535, 19.9045, 44.7339), 
-        pedsSpawn = vector3(-472.5457, 22.5242, 45.2165) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-472.5457, 22.5242, 45.2165) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-1421.8965, -87.7564, 52.3203), 
-        pedsSpawn = vector3(-1441.0848, -106.2386, 50.7941) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-1441.0848, -106.2386, 50.7941) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(-740.3744, -752.0114, 26.6656), 
-        pedsSpawn = vector3(-735.5145, -784.6246, 24.7953) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(-735.5145, -784.6246, 24.7953) -- z kadial pojdu npc k busu
     },
   --[[  { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },
     { 
         coords = vector3(305.5334, -772.7594, 29.2609), 
-        pedsSpawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
+        pedsspawn = vector3(312.5606, -726.7078, 29.3158) -- z kadial pojdu npc k busu
     },--]]
 }
 
