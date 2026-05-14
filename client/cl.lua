@@ -136,7 +136,7 @@ end
 function busstatus()
     CreateThread(function()
         while crbus and DoesEntityExist(crbus) do
-            local pped = ppedId()
+            local pped = PlayerPedId()
             local isinbus = GetVehiclePedIsIn(pped, false) == crbus
             
             if not isinbus then
@@ -202,7 +202,7 @@ function nextstop()
 
     while true do
         Wait(500)
-        local pped = ppedId()
+        local pped = PlayerPedId()
         
         if not DoesEntityExist(crbus) then 
             endjob(false)
@@ -414,9 +414,9 @@ function endjob(forced)
 
     while true do
         Wait(1000)
-        local dist = #(GetEntityCoords(ppedId()) - dnj.depo)
+        local dist = #(GetEntityCoords(PlayerPedId()) - dnj.depo)
         if dist < 10.0 then
-            if GetVehiclePedIsIn(ppedId(), false) == crbus then
+            if GetVehiclePedIsIn(PlayerPedId(), false) == crbus then
                 local speed = GetEntitySpeed(crbus)
                 if speed < 1.0 then
                     DeleteVehicle(crbus)
