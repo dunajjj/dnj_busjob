@@ -298,7 +298,7 @@ function dostoplogic(stopdata)
             TaskLeaveVehicle(ped, crbus, 0)
             
             SetTimeout(1500, function()
-                local spawncoords = stopdata.pedsSpawn or GetOffsetFromEntityInWorldCoords(crbus, 5.0, -5.0, 0.0)
+                local spawncoords = stopdata.pedsspawn or GetOffsetFromEntityInWorldCoords(crbus, 5.0, -5.0, 0.0)
                 TaskGoStraightToCoord(ped, spawncoords.x, spawncoords.y, spawncoords.z, 1.0, -1, 0.0, 0.0)
                 
                 SetTimeout(5000, function() 
@@ -319,7 +319,7 @@ function dostoplogic(stopdata)
         local model = dnj.pds[math.random(#dnj.pds)]
         lib.requestModel(model)
         
-        local spawncoords = stopdata.pedsSpawn
+        local spawncoords = stopdata.pedsspawn
         
         if not spawncoords then
             local fallbackDist = 20.0
