@@ -50,9 +50,16 @@ CreateThread(function()
                 return not crbus and pendingcheck > 0 
             end,
             onSelect = function()
-                TriggerServerEvent('dnj_bus:collectpc', pendingcheck, jtkn)
-                pendingcheck = 0
-                jtkn = nil
+                local ok, reason = lib.callback.await('dnj_bus:collectpc', false, pendingcheck, jtkn)
+                if ok then
+                    lib.notify({ type = 'success', description = 'Dostal jsi výplatu: $' .. pendingcheck })
+                    pendingcheck = 0
+                    jtkn = nil
+                elseif reason == 'no_money' then
+                    lib.notify({ type = 'error', description = 'Nemáš nic na vyplacení' })
+                else
+                    lib.notify({ type = 'error', description = 'Něco se pokazilo.' })
+                end
             end
         }
     })
