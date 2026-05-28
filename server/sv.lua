@@ -8,10 +8,8 @@ end
 lib.callback.register('dnj_bus:payd', function(source, account)
     local xpl = ESX.GetPlayerFromId(source)
     local price = dnj.depoprice
-
-    if xpl.getAccount(account).money >= price then -- lwk nwm ci ma ox lib check na account money
+    if xpl.getAccount(account).money >= price then
         xpl.removeAccountMoney(account, price)
-        
         local token = gntkn()
         actk[source] = token
         return token
@@ -20,25 +18,23 @@ lib.callback.register('dnj_bus:payd', function(source, account)
     end
 end)
 
-RegisterNetEvent('dnj_bus:collectpc', function(amount, token)
-    local src = source
-    local xpl = ESX.GetPlayerFromId(src)
-    
-    if not actk[src] or actk[src] ~= token then
-   --     DropPlayer(src, 'secure - busjob.')
-        return
+lib.callback.register('dnj_bus:collectpc', function(source, amount, token)
+    local xpl = ESX.GetPlayerFromId(source)
+
+    if not actk[source] or actk[source] ~= token then
+        return false, 'invalid_token'
     end
 
-    actk[src] = nil
+    actk[source] = nil
 
-    if amount and amount > 0 then
-        if amount > 50000 then 
-            return
-        end
-        
-        exports_ox_inventory:AddItem(src, 'money', amount)
-        TriggerClientEvent('ox_lib:notify', src, {type = 'success', description = 'Dostal si výplatu: $'..amount})
-    else
-        TriggerClientEvent('ox_lib:notify', src, {type = 'error', description = 'Nemáš žiadne peniaze na vyplatenie!'})
+    if not amount or amount <= 0 then
+        return false, 'no_money'
     end
+
+    if amount > 50000 then
+        return false, 'too_much'
+    end
+
+    exports.ox_inventory:AddItem(source, 'money', amount)
+    return true
 end)
