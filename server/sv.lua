@@ -22,17 +22,17 @@ lib.callback.register('dnj_bus:collectpc', function(source, amount, token)
     local xpl = ESX.GetPlayerFromId(source)
 
     if not actk[source] or actk[source] ~= token then
-        return false
+        return 
     end
 
     actk[source] = nil
 
     if not amount or amount <= 0 then
-        return false
+        return 
     end
 
     if amount > 50000 then
-        return false
+        return 
     end
 
     exports.ox_inventory:AddItem(source, 'money', amount)
