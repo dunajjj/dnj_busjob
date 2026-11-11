@@ -31,7 +31,7 @@ lib.callback.register('dnj_bus:collectpc', function(source, amount, token)
         return 
     end
 
-    if amount > 50000 then
+    if amount > 50000 then -- xddd ten cavo co robi secure
         return 
     end
 
